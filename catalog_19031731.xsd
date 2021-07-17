@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Declaring the root element indiemusicstore -->
+    <xs:element name="indiemusicstore">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="info"/>
+                <xs:element ref="songs"/>
+                <xs:element ref="description"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- info reference - child element of indiemusicstore element-->
+    <xs:element name="info">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="logo"/>
+                <xs:element ref="storeName"/>
+                <xs:element ref="address"/>
+                <xs:element ref="phone" minOccurs="1" maxOccurs="4"/>
+                <xs:element ref="email" minOccurs="0"/>
+                <xs:element ref="website"/>
+            </xs:sequence>
+        </xs:complexType>    
+    </xs:element>
+
+    <!-- logo reference - child element of info element-->
+    <xs:element name="logo">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- storeName reference - child element  of info element-->
+    <xs:element name="storeName" type="xs:string"/>
+
+    <!-- address reference - child element of info element-->
+    <xs:element name="address" type="xs:string"/>
+
+
+    <!-- phone reference - child element of info element-->
+    <xs:element name="phone">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="phoneType" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- defining the attribute of phone element-->
+    <xs:attribute name="phoneType">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <!-- applying restriction on attribute choices -->
+                <xs:enumeration value="mobile"/>
+                <xs:enumeration value="telephone"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- email reference - child element of info element -->
+    <xs:element name="email" type="xs:string"/>
+
+    <!-- website reference - child element of info element -->
+    <xs:element name="website" type="xs:anyURI"/>
+
+    <!-- declaring the songs element - child element of indiemusicstore element-->
+    <xs:element name="songs">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- song element can occur multiple times -->
+                <xs:element ref="song" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- song reference - child element of songs element -->
+    <xs:element name="song">
+        <xs:complexType>
+            <!-- the child elements must appear in given order -->
+            <xs:sequence>
+                <xs:element ref="image1" minOccurs="0"/>
+                <xs:element ref="image2" minOccurs="0"/>
+                <xs:element ref="image3" minOccurs="0"/>
+                <xs:element ref="image4" minOccurs="0"/>
+                <xs:element ref="image5" minOccurs="0"/>
+                <xs:element ref="image6" minOccurs="0"/>
+                <xs:element ref="name"/>
+                <xs:element ref="album" minOccurs="0"/>
+                <xs:element ref="released" minOccurs="0"/>
+                <xs:element ref="genre" minOccurs="0"/>
+                <xs:element ref="artist"/>
+                <xs:element ref="views" minOccurs="0"/>
+                <xs:element ref="director" minOccurs="0"/>
+                <xs:element ref="awards" minOccurs="0"/>
+                <xs:element ref="writers"/>
+            </xs:sequence>
+            <!-- making the songID attribute compulsory -->
+            <xs:attribute ref="songID" use="required"/>
+            <!-- the use of "available" attribute is optional -->
+            <xs:attribute ref="available" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- image1 reference- child element of song element -->
+    <!-- this is an empty element-->
+    <xs:element name="image1">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- image2 reference- child element of song element -->
+    <xs:element name="image2">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- image3 reference- child element of song element -->
+    <xs:element name="image3">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- image4 reference- child element of song element -->
+    <xs:element name="image4">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- image5 reference- child element of song element -->
+    <xs:element name="image5">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- image6 reference- child element of song element -->
+    <xs:element name="image6">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- name reference- child element of song element -->
+    <xs:element name="name">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="length" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- defining the attribute length of name  element -->
+    <xs:attribute name="length" type="xs:string"/>
+
+    <!-- album reference- child element of song element -->
+    <xs:element name="album" type="xs:string"/>
+
+    <!-- released reference- child element of song element -->
+    <xs:element name="released" type="xs:string"/>
+
+    <!-- genre reference- child element of song element -->
+    <xs:element name="genre" type="xs:string"/>
+
+    <!-- artist reference- child element of song element -->
+    <xs:element name="artist">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="type" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="type">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <!-- using the enumeration list -->
+                <xs:enumeration value="band"/>
+                <xs:enumeration value="single"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- views reference- child element of song element -->
+    <xs:element name="views">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="platform"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="platform" type="xs:string" fixed="youtube"/>
+
+    <!-- director reference- child element of song element -->
+    <xs:element name="director" type="xs:string"/>
+
+    <!-- awards reference- child element of song element -->
+    <xs:element name="awards">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <!-- award element can occur multiple times-->
+                <xs:element ref="award" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- award reference - child element of awards element -->
+    <xs:element name="award" type="xs:string"/>
+
+    <!-- writers reference- child element of song element -->
+    <xs:element name="writers">
+        <xs:complexType mixed="true">
+            <xs:sequence>
+                <!-- writerName element can occur multiple times -->
+                <xs:element ref="writerName" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- writerName reference - child element of writers element -->
+    <xs:element name="writerName" type="xs:string"/>
+
+    <!-- defining ID datatype on songID attribute -->
+    <xs:attribute name="songID" type="xs:ID"/>
+
+    <xs:attribute name="available">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <!-- using the enumeration list -->
+                <xs:enumeration value="yes"/>
+                <xs:enumeration value="no"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <!-- description reference - child element of indiemusicstore element -->
+    <xs:element name="description">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="note"/>
+                <xs:element ref="history"/>
+                <xs:element ref="copyright"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- note reference - child element of description element -->
+    <xs:element name="note" type="xs:string"/>
+
+    <!-- history reference - child element of description element -->
+    <xs:element name="history" type="xs:string"/>
+
+    <!-- copyright reference - child element of description element -->
+    <xs:element name="copyright" type="xs:string"/>
+
+</xs:schema>
+

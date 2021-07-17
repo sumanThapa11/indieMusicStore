@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--<!DOCTYPE indiemusicstore SYSTEM "catalog_19031731.dtd">-->
+<?xml-stylesheet type="text/css" href="catalog_19031731.css" ?>
+
+<!-- Defining root element i.e. indiemusicstore of the indie music store. -->
+<indiemusicstore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     
+    xsi:noNamespaceSchemaLocation="catalog_19031731.xsd">   
+    
+    <!--info element contains logo and general details of the store like name, address,
+    phone, email and website-->
+    <info>
+        <logo></logo>
+        <storeName>Indie Music Store</storeName>
+        <address>Bharatpur-11, Chitwan</address>
+        <phone phoneType="mobile">9867902367</phone>
+        <phone phoneType="telephone">056-520167</phone>
+        <email>indiemusicstore@gmail.com</email>
+        <website>https://www.indiemusicstore.com</website>
+    </info>
+   
+    <!--songs element contains all the details of the songs available in the store.-->
+    <songs>
+
+        <!--the details of a particular song like name,album,released date, genre,
+        artist,awards etc. is included in the song element. It also contains image of
+        the artists.-->
+        <song songID="IM100" available="yes">
+            <image1></image1>   <!--this element is for displaying the artist's image-->
+            <name length="4:38">Name: Smells Like Teen Spirit</name>
+            <album>Album: Nevermind</album>
+            <released>Released Date: 1991</released>
+            <genre>Genre: Alternative/Indie, Rock</genre>
+            <artist type="band">Artist: Nirvana</artist>
+            <views platform="youtube">1,258,539,904 views</views>
+            <awards>
+                Awards:
+                <award>MTV Best New Artist</award>
+                <award>Best Single</award>  
+            </awards>
+            <writers>
+                Writers:
+                <writerName>Dave Grohl</writerName>
+                <writerName>Kurt Cobain</writerName>
+                <writerName>Krist Novoselic</writerName>
+            </writers> 
+        </song>
+               
+        <song songID="IM101" available="no">
+            <image2></image2> 
+            <name length="5:03">Name: Sweet Child O' Mine</name>
+            <album>Album: Appetite for Destruction</album>
+            <genre>Genre: Glam Metal</genre>
+            <artist type="band">Artist: Guns N' Roses</artist>
+            <views platform="youtube">1,235,815,153 views</views>
+            <awards>
+                Awards:
+                <award>MTV Best Rock Video</award>
+                <award>Favorite Pop Single</award>  
+            </awards>
+            <writers>
+                Writers:
+                <writerName>Axl Rose</writerName>
+                <writerName>Izzy Stradlin</writerName>
+                <writerName>Slash</writerName>
+                <writerName>Duff McKagan</writerName>
+                <writerName>Steve Adler</writerName>
+                </writers>       
+        </song>
+      
+        <song songID="IM102">
+            <image3></image3>
+            <name length="5:59">Name: Like a Rolling Stone</name>
+            <album>Album: Highway 61 Revisited</album>
+            <released>Released Date: 1965</released>
+            <genre>Genre:Classic Rock</genre>
+            <artist type="single">Artist: Bob Dylan</artist>
+            <views platform="youtube">1,258,539,904 views</views>
+            <writers>
+                Writers:
+                <writerName>Bob Dylan</writerName>
+            </writers>       
+        </song>
+        
+        <song songID="IM103" available="yes">
+            <image4></image4>
+            <name length="8:09">Name: Hey Jude</name>
+            <album>Album: Hey Jude</album>
+            <released>Released Date: 1968</released>
+            <genre>Genre: Pop Rock</genre>
+            <artist type="band">Artist: The Beatles</artist>
+            <awards>
+                Awards:
+                <award>Grammy Hall of Fame</award>
+            </awards>
+            <writers>
+                Writers:
+                 <writerName>John Lennon</writerName>
+                 <writerName>Paul McCartney</writerName>
+            </writers>       
+        </song>
+           
+      
+        <song songID="IM104" available="yes">
+            <image5></image5>
+            <name length="4:32">Name: Yellow</name>
+            <album>Album: Yellow</album>
+            <released>Released Date: 2000</released>
+            <artist type="band">Artist: Coldplay</artist>
+            <views platform="youtube">564,604,034 views</views>
+            <awards>
+                Awards:
+                <award>Nomination for Best Rock Song</award>
+            </awards>
+            <writers>
+                Writers:
+                <writerName>Will Champion</writerName>
+                <writerName>Chris Martin</writerName>
+                <writerName>Jon Buckland</writerName>
+                 <writerName>Guy Berryman</writerName>
+            </writers>       
+        </song>
+       
+        <song songID="IM105" available="yes">
+            <image6></image6>
+            <name length="3:55">Name: Falling</name>
+            <released>Released Date: 2019</released>
+            <genre>Genre: Pop</genre>
+            <artist type="single">Artist: Harry Styles</artist>
+            <views platform="youtube">97,152,731 views</views>
+            <director>Director: Dave Meyers </director>
+            <awards>
+                Awards:
+                <award>Best Single</award>  
+            </awards>
+            <writers>
+                Writers:
+                <writerName>Harry Styles</writerName>
+            </writers>       
+        </song>
+         
+    </songs>
+
+    <!--the desciption element contains other elements like note, history and copyright 
+    which displays information related to the store.-->
+    <description>
+        <note>
+            Remember us for the best musics &#38; old records.
+        </note>
+        <history>
+            <![CDATA[Our store has been providing songs and records to our customer for the 
+            past 35 years. The store has been recognized all over the country. If you want to 
+            get lost in the world of music, visit our store soon.]]>
+        </history>
+        <copyright>
+            &#169;indiemusicstore. All rights reserved.
+        </copyright>
+    </description>
+ 
+</indiemusicstore>

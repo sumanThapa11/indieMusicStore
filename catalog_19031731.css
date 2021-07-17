@@ -1,0 +1,199 @@
+
+/* setting background color of the entire page*/
+indiemusicstore {
+    background-color: #C5D5CB;
+    margin:0;
+    display: block;
+}
+
+/* styling the details of the store like name,address,phone etc.*/
+info {
+    outline: 2px solid #B0A6A4;
+    height: 200px;
+    width:auto;
+    padding: 10pt;
+   
+    margin-bottom: 5px;
+    display: block;
+    box-shadow: 0px 0px 10px 2px;
+    background-image: url("info.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+    position: relative;
+    border-radius: 15px;
+}
+
+
+/* adding and styling the logo of the store*/
+logo{
+    padding: 2em;
+    height:55px;
+    width: 60px;
+    position: absolute;
+    box-shadow: 0px 0px 10px 2px grey;
+    top: 100px;
+    left: 500px;
+    background-image: url("logo.png");
+    background-size: cover;
+    opacity:0.85;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+info storeName {
+    color:whitesmoke;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    font-size: 500%;
+    margin-bottom: 1%;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+info address,phone,email,website {
+    color:	rgb(245,245,245);
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    font-size: 100%;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* creating the floating boxes for the song details*/
+song {
+    height: 410px;
+    width: 400px;
+    background-color: #e3e0cf;
+   
+    display: block;
+    float:left;
+  
+    padding: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px 5px grey;
+
+    font-family: roboto;
+    border-radius: 18px;
+
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+/* adding hover effect to each song container*/
+song:hover {
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+}
+
+
+song name,album,released,genre,artist,views,awards,writers,director {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #9fa8a3;
+    font-weight: bold;
+    font-size: 90%;
+    display: block;
+}
+
+song writerName,award {
+    display: list-item;
+    list-style-type:disc; /* displaying the awards and writernames in a list*/
+    margin-left: 20px;
+}
+
+image1 {
+    height:150px;
+    width:400px;
+    background-image: url(nirvana.jpg);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    position: absolute;
+    background-size:cover;
+}
+
+image2 {   
+    height:150px;
+    width:400px;
+    background-image: url(gunsnroses.jpg);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    position: absolute;
+    background-size:cover;
+}
+
+image3 {
+    height:150px;
+    width:400px;
+    background-image: url(bobdylan.jpg);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    position: absolute;
+    background-size:cover;
+}
+
+image4 {
+    height:150px;
+    width:400px;
+    background-image: url(beatles.jpg);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    position: absolute;
+    background-size:cover;
+}
+
+image5 {
+    height:150px;
+    width:400px;
+    background-image: url(coldplay.jpg);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    position: absolute;
+    background-size:cover;
+}
+
+image6 {
+    height:150px;
+    width:400px;
+    background-image: url(harrystyles.jfif);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    position: absolute;
+    background-size:cover;
+}
+
+song name,album,genre,artist,views,awards,writers,director,released{
+    position: relative;
+    top: 160px;
+    left: 20px;
+}
+
+description {
+    display: block;
+    margin: 3px;
+    height: auto;
+    clear:left;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace ;
+    color: #9fa8a3;
+
+}
+
+
+description note{
+    margin-left: 8%;
+    font-size:300%;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+description history {
+    white-space:inherit;
+    font-size: 180%;
+}
+
+description copyright{
+    white-space: pre;
+    font-size: 110%;
+    font-weight: bold;
+}

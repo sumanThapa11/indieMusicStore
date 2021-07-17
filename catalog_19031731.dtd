@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT indiemusicstore (info,songs,description)>
+
+
+<!ELEMENT info (logo,storeName,address,phone+,email?,website)>
+
+<!ELEMENT logo EMPTY>
+<!ELEMENT storeName (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+
+<!ELEMENT phone (#PCDATA)>
+<!ATTLIST phone phoneType (mobile|telephone) #REQUIRED>
+
+<!ELEMENT email  (#PCDATA)>
+<!ELEMENT website (#PCDATA)>  
+
+
+<!ELEMENT songs (song+)>
+
+<!ELEMENT song ((image1|image2|image3|image4|image5|image6),name,album?,released?,genre?,artist,views?,director?,awards?,writers)>
+<!ATTLIST song songID ID #REQUIRED>
+<!ATTLIST song available (yes|no) #IMPLIED>
+
+<!ELEMENT image1 EMPTY>
+<!ELEMENT image2 EMPTY>
+<!ELEMENT image3 EMPTY>
+<!ELEMENT image4 EMPTY>
+<!ELEMENT image5 EMPTY>
+<!ELEMENT image6 EMPTY>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name length CDATA #REQUIRED>
+
+<!ELEMENT album (#PCDATA)>
+<!ELEMENT released (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+
+<!ELEMENT artist (#PCDATA)>
+<!ATTLIST artist type (band|single) #REQUIRED>
+
+<!ELEMENT views (#PCDATA)>
+<!ATTLIST views platform CDATA #FIXED "youtube">
+
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT awards ANY>
+<!ELEMENT writers ANY>
+
+<!ELEMENT award (#PCDATA)>
+<!ELEMENT writerName (#PCDATA)>
+
+
+<!ELEMENT description (note,history,copyright)>
+
+<!ELEMENT note (#PCDATA)>
+<!ELEMENT history (#PCDATA)>
+<!ELEMENT copyright (#PCDATA)>
